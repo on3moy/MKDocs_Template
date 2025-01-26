@@ -1,0 +1,101 @@
+# Choose an appropriate site name
+site_name: My MkDocs Template
+
+theme:
+    # Choosing the theme from third party or built in thme like mkdocs
+    name: material
+    # Adding a Logo
+    logo: img/trex_icon.png
+    # Changing the theme with material
+    palette:
+    # Dark Theme with toggle
+    # A list of dictionaries requires specific indentation below this point
+    - scheme: slate
+      primary: 'black'  
+      accent: 'light blue'  
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Light Theme with toggle
+    - scheme: default  
+      primary: 'white'
+      accent: 'teal'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    font:
+        text: 'calibri'
+        code: 'Consolas'
+    # Adding short cut keys
+    shortcuts:
+        help: 191    # ?
+        next: 78     # n
+        previous: 80 # p
+        search: 83   # s
+    features:
+        # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.sections
+        - navigation.expand
+        - navigation.top
+        - navigation.instant
+        - navigation.instant.progress
+        - navigation.instant.preview  
+        - navigation.path
+        - toc.follow
+        - toc.integrate
+        - search.suggest
+        - search.highlight
+        - content.tabs.link
+        - content.code.annotation
+        - content.code.copy
+        - content.code.selects
+        - content.tooltips
+nav:
+    - Home: index.md
+    - Cheat Sheets:
+        - Mkdocs: 'cheat sheets/mkdocs_cheatsheet.md'
+        - YML Indentation: 'cheat sheets/yml_cheatsheet.md'
+    - Jupyter Notebooks:
+        - Example Notebook: 'notebooks/example_notebook.ipynb'
+        - Example Notebook2: 'notebooks/generatePassword.ipynb'
+
+# Check out all markdown extentions
+# https://squidfunk.github.io/mkdocs-material/reference/
+markdown_extensions:
+    # Table of Contents Stay
+    - toc:
+        permalink: "⬅️"
+    # Ability to add notes in MD like !!! Some notes
+    - admonition
+    # Add buttons!
+    - attr_list
+    # Highlights additional features https://squidfunk.github.io/mkdocs-material/reference/code-blocks/
+    - pymdownx.highlight:
+        anchor_linenums: true
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    # Adds expanded notes, hidden content
+    - pymdownx.details
+    # HTML links become clickable
+    - pymdownx.magiclink
+    # Adds strike through
+    - pymdownx.tilde
+    - pymdownx.tabbed
+    # https://squidfunk.github.io/mkdocs-material/reference/lists/
+    - def_list
+    - pymdownx.tasklist:
+        custom_checkbox: true
+
+plugins:
+  # Add search bar
+  - search
+  # Add the ability to display jupyter notebooks
+  - mkdocs-jupyter
+
+copyright: Copyright &copy; 2024 Moy Patel

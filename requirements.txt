@@ -1,0 +1,4 @@
+ipykernel
+mkdocs
+mkdocs-material
+mkdocs-jupyter
