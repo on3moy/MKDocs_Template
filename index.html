@@ -356,6 +356,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#creating-and-deploying-to-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and Deploying to Github Pages
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -578,7 +587,32 @@
 - Built-in themes from Mkdocs is easier to work with and modify.<br />
 - Third-party themes such as Materials requires you use their documentation only for customization. </p>
 </div>
-<p>Author: Moy Patel 🦖</p>
+<h2 id="creating-and-deploying-to-github-pages">Creating and Deploying to Github Pages<a class="headerlink" href="#creating-and-deploying-to-github-pages" title="Permanent link">⬅️</a></h2>
+<ol>
+<li>First you can create your page and develop everything you need to without doing anything in GIT.  <ul>
+<li><code>mkdocs new project_name</code></li>
+</ul>
+</li>
+<li>Test out the changes and content.<ul>
+<li><code>mkdocs serve</code></li>
+</ul>
+</li>
+<li>When you are ready to publish and made all your changes.<ul>
+<li>mkdocs build will create a new folder called <strong>site</strong>. This folder will be referenced when publishing.</li>
+<li><code>mkdocs build</code></li>
+</ul>
+</li>
+<li>Publish your folder/code to your github <ul>
+<li>Requires a few steps, GIT installation, an IDE, GitHub account, etc.  </li>
+<li><code>mkdocs gh-deploy</code><ul>
+<li>This will automatically create git pages and create a link</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>BAM! Thats it assuming there were no issues with your Github account.<br />
+Author: Moy Patel 🦖</p>
 
 
 
